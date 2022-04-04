@@ -1,25 +1,16 @@
 void main(List<String> args) {
-  Map<String, dynamic> example = {
-    'name': 'Sarmad Rehan',
-    'age': 21,
-    'profession': 'Student',
+  // Pizza Ordering
+  double? price =0.0;
+  final result = [];
+  const pizzaPrices = {
+    'margherita': 5.5,
+    'paperoni': 7.5,
+    'vegetarian': 6.5,
   };
-  // for (var key in example.keys) {
-  //   print(example[key]);
-  // }
-  // for (var value in example.values) {
-  //   print(value);
-  // }
-  // for (var entry in example.entries) {
-  //   print('${entry.key}:${entry.value}');
-  // }
-  Map<String, dynamic> example2 = {
-    'name': 'Rehan',
-    'age': 20,
-    'profession': 'Dart Developer',
-  };
-  List<Map> result = [];
-  result.add(example);
-  result.add(example2);
-  print(result);
+  const order = ['margherita', 'paperoni'];
+  for (var key in order) {
+    result.add(pizzaPrices[key]);
+    price = price! + pizzaPrices[key];
+  }
+  result.
 }
